@@ -53,7 +53,9 @@
     <Compile Include="Estructuras Lineales\Clases\Nodo.cs" />
     <Compile Include="Estructuras Lineales\Clases\Pilas.cs" />
     <Compile Include="Estructuras No Lineales\Clases\ArbolBusqueda.cs" />
-    <Compile Include="Estructuras No Lineales\frmArboles.cs" />
+    <Compile Include="Estructuras No Lineales\frmArboles.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Estructuras No Lineales\frmArboles.Designer.cs">
       <DependentUpon>frmArboles.cs</DependentUpon>
     </Compile>
@@ -64,7 +66,9 @@
     <Compile Include="frmInicio.Designer.cs">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Estructuras Lineales\frmPilas.cs" />
+    <Compile Include="Estructuras Lineales\frmPilas.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Estructuras Lineales\frmPilas.Designer.cs">
       <DependentUpon>frmPilas.cs</DependentUpon>
     </Compile>
