@@ -47,12 +47,12 @@ namespace EDDemo.Estructuras_No_Lineales
             else if (Dato > Nodo.Dato)
                 InsertaNodo(Dato, ref Nodo.Der);          
         }
-        public void MuestraArbolAcostado(int nivel, NodoBinario nodo )
+        public void MuestraArbolAcostado(int nivel, NodoBinario nodo)
         {
             if (nodo == null)
                 return;
             MuestraArbolAcostado(nivel + 1, nodo.Der);
-            for(int i=0; i<nivel; i++)
+            for (int i = 0; i < nivel; i++)
             {
                 strArbol = strArbol + "      ";
             }
@@ -111,6 +111,21 @@ namespace EDDemo.Estructuras_No_Lineales
 
             return;
          }
+        // Método de búsqueda
+        public bool Busqueda(int Valor, NodoBinario nodo)
+        {
+            if (nodo == null)
+                return false; 
+
+            if (nodo.Dato == Valor)
+                return true; 
+
+            // Busca en el subarbol izquierdo o derecho
+            if (Valor < nodo.Dato)
+                return Busqueda(Valor, nodo.Izq);
+            else
+                return Busqueda(Valor, nodo.Der);
+        }
 
     }
 }

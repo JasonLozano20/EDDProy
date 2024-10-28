@@ -173,5 +173,25 @@ namespace EDDemo.Estructuras_No_Lineales
             txtDato.Text = "";
         }
 
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            int valorBuscado;
+            bool Numero = int.TryParse(txtDato.Text, out valorBuscado);
+            if (!Numero)
+            {
+                MessageBox.Show("Ingresa un valor numerico");
+                return;
+            }
+            // Llamamos al metodo de busqueda en el arbol
+            bool encontrado = miArbol.Busqueda(valorBuscado, miArbol.RegresaRaiz());
+
+            // Mostramos el resultado 
+            if (encontrado)
+                MessageBox.Show("Valor encontrado en el arbol.");
+            else
+                MessageBox.Show("Valor no encontrado en el arbol.");
+        }
+
     }
+    
 }

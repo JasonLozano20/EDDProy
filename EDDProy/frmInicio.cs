@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Algoritmos_recursividad;
 using EDDemo.Estructuras_No_Lineales;
 
 namespace EDDemo
@@ -18,21 +19,11 @@ namespace EDDemo
             InitializeComponent();
         }
 
-        private void frmInicio_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void pilasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPilas mPilas = new frmPilas();
-            mPilas.MdiParent = this;
-            mPilas.Show();
+            Pila1.Form2 pila = new Pila1.Form2();
+            pila.MdiParent = this;
+            pila.Show();
         }
 
         private void estructurasLinealesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -45,6 +36,52 @@ namespace EDDemo
             frmArboles mArboles = new frmArboles();
             mArboles.MdiParent = this;
             mArboles.Show();
+        }
+
+        private void colasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ColaDinamica.Form1 cola=new ColaDinamica.Form1();
+            cola.MdiParent = this;
+            cola.Show();
+        }
+
+        private void simpleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListaSimple.Form3 simple = new ListaSimple.Form3();
+            simple.MdiParent = this;
+            simple.Show();
+        }
+
+        private void dobleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListaDobleEnlazada.Form4 doble = new ListaDobleEnlazada.Form4();
+            doble.MdiParent = this;
+            doble.Show();
+        }
+
+        private void circularToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Lista_Circular_SImple.Form5 circular= new Lista_Circular_SImple.Form5();
+            circular.MdiParent = this;
+            circular.Show();
+
+        }
+
+        private void circularDobleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Lista_Circular_Doble.Form6 circularDoble = new Lista_Circular_Doble.Form6();
+            circularDoble.MdiParent = this;
+            circularDoble.Show();
+
+        }
+
+        
+
+        private void recursividadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormRecursividad Recursividad = new FormRecursividad();
+            Recursividad.MdiParent = this;
+            Recursividad.Show();
         }
     }
 }
