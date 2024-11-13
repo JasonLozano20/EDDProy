@@ -16,6 +16,27 @@ namespace ListaDobleEnlazada
             cabeza = null;
             cola = null;
         }
+        public Nodo getCabeza()
+        {
+            return cabeza;
+            
+        }
+        public string ToDot(Nodo cabeza)
+        {
+            StringBuilder b = new StringBuilder();
+            Nodo nodoActual = cabeza;
+            while (nodoActual != null)
+            {
+                if (nodoActual.Siguiente != null)
+                {
+                    b.AppendFormat("{0} -> {1};{2}", nodoActual.Valor.ToString(), nodoActual.Siguiente.Valor.ToString(),Environment.NewLine);
+                    b.AppendFormat("{1} -> {0};{2}", nodoActual.Valor.ToString(), nodoActual.Siguiente.Valor.ToString(), Environment.NewLine);
+                }
+                nodoActual = nodoActual.Siguiente;
+            }
+            return b.ToString();
+        }
+
         // Método para insertar al inicio
         public void InsertarInicio(int valor)
         {

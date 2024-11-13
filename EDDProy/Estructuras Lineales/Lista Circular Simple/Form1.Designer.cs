@@ -102,7 +102,6 @@
             this.label2.Size = new System.Drawing.Size(137, 19);
             this.label2.TabIndex = 6;
             this.label2.Text = "Ingresa la posicion";
-            
             // 
             // label3
             // 

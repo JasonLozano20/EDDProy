@@ -35,6 +35,7 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnGrafica = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtInput
@@ -109,11 +110,24 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Lista Simple";
             // 
+            // btnGrafica
+            // 
+            this.btnGrafica.BackColor = System.Drawing.Color.IndianRed;
+            this.btnGrafica.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGrafica.Location = new System.Drawing.Point(106, 326);
+            this.btnGrafica.Name = "btnGrafica";
+            this.btnGrafica.Size = new System.Drawing.Size(94, 37);
+            this.btnGrafica.TabIndex = 7;
+            this.btnGrafica.Text = "Graficar";
+            this.btnGrafica.UseVisualStyleBackColor = false;
+            this.btnGrafica.Click += new System.EventHandler(this.btnGrafica_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(473, 450);
+            this.Controls.Add(this.btnGrafica);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBuscar);
@@ -137,6 +151,7 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnGrafica;
     }
 }
 

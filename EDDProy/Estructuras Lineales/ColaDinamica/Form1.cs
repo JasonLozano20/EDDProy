@@ -87,13 +87,16 @@ namespace ColaDinamica
         private void btnGraficar_Click(object sender, EventArgs e)
         {
             string graphVizString;
+            String strOrientacion = "";
             Nodo inicio = cola.ObtenerInicio();
             if (inicio == null)
             {
                 MessageBox.Show("La cola esta vacia");
+
             }
+            strOrientacion = "rankdir=\"LR\";";
             StringBuilder sb = new StringBuilder();
-            sb.Append("digraph G { node [shape=\"box\"]; " + Environment.NewLine);
+            sb.Append("digraph G {" + strOrientacion + " node [shape=\"box\"]; " + Environment.NewLine);
             sb.Append(cola.ToDot(inicio));
             sb.Append("}");
             graphVizString = sb.ToString();

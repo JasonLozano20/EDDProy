@@ -84,7 +84,7 @@ namespace ColaDinamica
             }
             return elementos;
         }
-        public string ToDot(Nodo inico)
+        public string ToDot(Nodo inicio)
         {
             StringBuilder b = new StringBuilder();
             Nodo actual = inicio;

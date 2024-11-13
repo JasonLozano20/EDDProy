@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EDDemo;
 
 namespace ListaDobleEnlazada
 {
@@ -98,7 +99,32 @@ namespace ListaDobleEnlazada
             }
         }
 
-        
+        private void btnGraficar_Click(object sender, EventArgs e)
+        {
+            string graphVizString;
+            String strOrientacion = "";
+            Nodo cabeza = lista.getCabeza();
+            if ( cabeza == null )
+            {
+                MessageBox.Show("La lista Doble esta vacia");
+
+            }
+            else
+            {
+                strOrientacion = "rankdir=\"LR\";";
+                StringBuilder sb = new StringBuilder();
+                sb.Append("digraph G {" + strOrientacion + " node [shape=\"box\"]; " + Environment.NewLine);
+                sb.Append(lista.ToDot(cabeza));
+                sb.Append("}");
+                graphVizString = sb.ToString();
+                Bitmap bm = FileDotEngine.Run(graphVizString);
+
+                frmGrafica graf = new frmGrafica ();
+                graf.ActualizaGrafica(bm);
+                graf.MdiParent = this.MdiParent;
+                graf.Show();
+            }
+        }
     }
     
 }

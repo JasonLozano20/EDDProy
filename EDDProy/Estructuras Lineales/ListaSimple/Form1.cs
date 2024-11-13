@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ColaDinamica;
+using EDDemo;
 
 namespace ListaSimple
 {
@@ -82,6 +84,35 @@ namespace ListaSimple
                 MessageBox.Show("Ingresa un valor para buscar.");
             }
 
+        }
+
+        private void btnGrafica_Click(object sender, EventArgs e)
+        {
+            string graphVizString;
+            String strOrientacion = "";
+            Nodo cabeza = lista.ObtenerCabeza();
+            if (cabeza == null)
+            {
+                MessageBox.Show("La lista esta vacia");
+
+            }
+            else
+            {
+                strOrientacion = "rankdir=\"LR\";";
+                StringBuilder sb = new StringBuilder();
+                sb.Append("digraph G {" + strOrientacion + " node [shape=\"box\"]; " + Environment.NewLine);
+                sb.Append(lista.ToDot(cabeza));
+                sb.Append("}");
+                graphVizString = sb.ToString();
+                Bitmap bm = FileDotEngine.Run(graphVizString);
+
+                frmGrafica graf = new frmGrafica();
+                graf.ActualizaGrafica(bm);
+                graf.MdiParent = this.MdiParent;
+                graf.Show();
+            }
+
+            
         }
     }
 }

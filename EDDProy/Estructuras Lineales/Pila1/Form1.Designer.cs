@@ -136,6 +136,7 @@
             this.Controls.Add(this.btnApilar);
             this.Name = "Form2";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

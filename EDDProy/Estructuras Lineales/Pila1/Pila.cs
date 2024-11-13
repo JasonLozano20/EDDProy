@@ -21,18 +21,18 @@ namespace Pila1
             Nodo aux = tope;
             while (aux != null)
             {
-                if(aux.Siguiente != null)
+                if (aux.Siguiente != null)
                 {
                     b.AppendFormat("{0} -> {1};{2}", aux.Dato.ToString(), aux.Siguiente.Dato.ToString(), Environment.NewLine);
                 }
-                aux=aux.Siguiente;
+                aux = aux.Siguiente;
             }
             return b.ToString();
         }
         //Metodo para insertar un elemento
         public void Push(Nodo dato)
         {
-            
+
             if (tope == null)
             {
                 tope = dato;

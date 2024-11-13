@@ -89,5 +89,23 @@ namespace ListaSimple
             }
             return elementos;
         }
+        public string ToDot(Nodo cabeza)
+        {
+            StringBuilder b = new StringBuilder();
+            Nodo aux = cabeza;
+            while (aux != null)
+            {
+                if (aux.Siguiente != null)
+                {
+                    b.AppendFormat("{0} -> {1};{2}", aux.Dato.ToString(), aux.Siguiente.Dato.ToString(), Environment.NewLine);
+                }
+                aux = aux.Siguiente;
+            }
+            return b.ToString();
+        }
+        public Nodo ObtenerCabeza()
+        {
+            return cabeza;
+        }
     }
 }

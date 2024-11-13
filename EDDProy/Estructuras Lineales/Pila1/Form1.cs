@@ -70,15 +70,17 @@ namespace Pila1
         private void btnGrafica_Click(object sender, EventArgs e)
         {
             string graphVizString;
+            String strOrientacion = "";
             Nodo tope = MiPila.Tope();
             if (tope == null)
             {
                 MessageBox.Show("La pila esta vacia");
             }
+            strOrientacion = "rankdir=\"TB\";";
             StringBuilder sb = new StringBuilder();
-            sb.Append("digraph G { node [shape=\"circle\"]; " + Environment.NewLine);
+            sb.Append("digraph G {"+ strOrientacion +" node [shape=\"box\"]; " + Environment.NewLine);
             sb.Append(MiPila.ToDot(tope));
-            sb.Append("{");
+            sb.Append("}");
             graphVizString = sb.ToString();
             Bitmap bm = FileDotEngine.Run(graphVizString);
 
@@ -86,6 +88,11 @@ namespace Pila1
             graf.ActualizaGrafica(bm);
             graf.MdiParent = this.MdiParent;
             graf.Show();
+
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
 
         }
     }

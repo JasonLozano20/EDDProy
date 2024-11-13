@@ -16,8 +16,12 @@ namespace Lista_Circular_SImple
             Inicio = null;
             Fin = null;
         }
+        public Nodo GetNodo()
+        {
+            return Inicio;
+        }
 
-        // Función para insertar un nodo en una posición específica
+        // Funcion para insertar un nodo en una posicion especifica
         public void Insertar(int posicion, int dato)
         {
             Nodo nuevo = new Nodo(dato);
@@ -40,7 +44,7 @@ namespace Lista_Circular_SImple
                 Nodo aux = Inicio;
                 Nodo previo = null;
 
-                // Avanzar hasta la posición deseada
+                // Avanzar hasta la posicion deseada
                 while (pos < posicion && aux.Sig != Inicio)
                 {
                     previo = aux;
@@ -48,7 +52,7 @@ namespace Lista_Circular_SImple
                     pos++;
                 }
 
-                // Insertar el nuevo nodo en la posición encontrada
+                // Insertar el nuevo nodo en la posicion encontrada
                 if (aux != null)
                 {
                     nuevo.Sig = aux;
@@ -60,7 +64,7 @@ namespace Lista_Circular_SImple
             }
         }
 
-        // Función para eliminar un nodo de una posición específica
+        // Funcion para eliminar un nodo de una posicion especifica
         public int Eliminar(int posicion)
         {
             if (Inicio == null && Fin == null) 

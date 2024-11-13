@@ -57,9 +57,8 @@ namespace EDDemo.Estructuras_No_Lineales
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            miArbol = null;
+            miArbol.PodarArbol();
             miRaiz = null;
-            miArbol = new ArbolBusqueda();
             txtArbol.Text  = "";
             txtDato.Text = "";
             lblRecorridoPreOrden.Text = "";
@@ -70,6 +69,7 @@ namespace EDDemo.Estructuras_No_Lineales
         private void btnGrafica_Click(object sender, EventArgs e)
         {
             String graphVizString;
+            String strOrientacion = "";
 
             miRaiz = miArbol.RegresaRaiz();
             if (miRaiz == null)
@@ -77,9 +77,14 @@ namespace EDDemo.Estructuras_No_Lineales
                 MessageBox.Show("El arbol esta vacio");
                 return;
             }
+            if (rdbtnHorizontal.Checked)
+            {
+                strOrientacion = "rankdir=\"LR\";";
+            }
 
             StringBuilder b = new StringBuilder();
-            b.Append("digraph G { node [shape=\"circle\"]; " + Environment.NewLine);
+            //rankdir="LR";
+            b.Append("digraph G { " + strOrientacion + "node [shape=\"circle\"]; " + Environment.NewLine);
             b.Append(miArbol.ToDot(miRaiz));
             b.Append("}");
             graphVizString =  b.ToString();
@@ -141,6 +146,19 @@ namespace EDDemo.Estructuras_No_Lineales
             lblRecorridoPostOrden.Text = ""; 
             miArbol.PostOrden(miRaiz);
             lblRecorridoPostOrden.Text = miArbol.strRecorrido;
+
+            //Recorrido en Niveles
+            miRaiz = miArbol.RegresaRaiz();
+            miArbol.strRecorrido = "";
+
+            if (miRaiz == null)
+            {
+                lblNiveles.Text = "El arbol esta vacio";
+                return;
+            }
+            lblNiveles.Text = "";
+            miArbol.RecorridoPorNiveles(miRaiz);
+            lblNiveles.Text = miArbol.strRecorrido;
         }
 
         private void btnCrearArbol_Click(object sender, EventArgs e)
@@ -192,6 +210,57 @@ namespace EDDemo.Estructuras_No_Lineales
                 MessageBox.Show("Valor no encontrado en el arbol.");
         }
 
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(txtDato.Text))
+                {
+                    MessageBox.Show("Por favor ingrese un valor para eliminar");
+                    return;
+                }
+
+                int datoEliminar = int.Parse(txtDato.Text);
+
+                if (miArbol.EliminarNodo(datoEliminar))
+                {
+                    // Actualizar la visualización del árbol
+                    miRaiz = miArbol.RegresaRaiz();
+                    miArbol.strArbol = "";
+                    miArbol.MuestraArbolAcostado(1, miRaiz);
+                    txtArbol.Text = miArbol.strArbol;
+
+                    MessageBox.Show($"El nodo {datoEliminar} ha sido eliminado");
+                }
+                else
+                {
+                    MessageBox.Show($"El nodo {datoEliminar} no se encontro en el arbol");
+                }
+
+                txtDato.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al eliminar el nodo: {ex.Message}");
+            }
+        }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            if (miArbol.EstaVacio())
+            {
+                MessageBox.Show("No existe arbol");
+                return;
+            }
+
+            string info =$"Altura del arbol: {miArbol.ObtenerAltura()}\n" +
+                         $"Cantidad de hojas: {miArbol.ContarHojas()}\n" +
+                         $"Total de nodos: {miArbol.ContarNodos()}\n " +
+                         $"El arbol esta completo: {miArbol.EsArbolCompleto()}\n" +
+                         $"Es arbol esta lleno: {miArbol.EsArbolLleno()}";
+
+            MessageBox.Show(info, "Informacion del Arbol", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
     
 }

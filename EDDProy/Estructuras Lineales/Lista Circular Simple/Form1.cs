@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EDDemo;
 
 namespace Lista_Circular_SImple
 {
@@ -22,7 +24,7 @@ namespace Lista_Circular_SImple
         {
             int posicion, dato;
 
-            // Validar si los TextBoxes contienen números válidos
+            // Validar si los TextBoxes contienen numeros validos
             if (int.TryParse(txtPosicion.Text, out posicion) && int.TryParse(txtDato.Text, out dato))
             {
                 listaCircular.Insertar(posicion, dato);
@@ -40,7 +42,7 @@ namespace Lista_Circular_SImple
         {
             int posicion;
 
-            // Validar si el TextBox de posición contiene un número válido
+            // Validar si el TextBox de posición contiene un numero valido
             if (int.TryParse(txtPosicion.Text, out posicion))
             {
                 int eliminado = listaCircular.Eliminar(posicion);
@@ -78,5 +80,7 @@ namespace Lista_Circular_SImple
                 } while (actual != listaCircular.Inicio);
             }
         }
+
+       
     }
 }

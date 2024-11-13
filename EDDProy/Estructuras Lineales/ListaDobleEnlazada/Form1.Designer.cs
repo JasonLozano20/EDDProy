@@ -37,6 +37,7 @@
             this.lblMensaje = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnGraficar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtInput
@@ -106,12 +107,11 @@
             // lblMensaje
             // 
             this.lblMensaje.AutoSize = true;
-            this.lblMensaje.Location = new System.Drawing.Point(243, 357);
+            this.lblMensaje.Location = new System.Drawing.Point(282, 356);
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(44, 16);
             this.lblMensaje.TabIndex = 6;
             this.lblMensaje.Text = "label1";
-            
             // 
             // label1
             // 
@@ -133,11 +133,24 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Listas doblemente enlazadas";
             // 
+            // btnGraficar
+            // 
+            this.btnGraficar.BackColor = System.Drawing.Color.Silver;
+            this.btnGraficar.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGraficar.Location = new System.Drawing.Point(150, 336);
+            this.btnGraficar.Name = "btnGraficar";
+            this.btnGraficar.Size = new System.Drawing.Size(94, 38);
+            this.btnGraficar.TabIndex = 9;
+            this.btnGraficar.Text = "Graficar";
+            this.btnGraficar.UseVisualStyleBackColor = false;
+            this.btnGraficar.Click += new System.EventHandler(this.btnGraficar_Click);
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(586, 450);
+            this.Controls.Add(this.btnGraficar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblMensaje);
@@ -165,6 +178,7 @@
         private System.Windows.Forms.Label lblMensaje;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnGraficar;
     }
 }
 
