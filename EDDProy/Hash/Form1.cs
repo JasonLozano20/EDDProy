@@ -63,6 +63,8 @@ namespace EDDemo.Busqueda
 
         private void btnCargarArchivo_Click(object sender, EventArgs e)
         {
+           Hashtable ht = new Hashtable();
+            listDatos.Items.Clear();
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.Filter = "Archivos de texto (.txt)|*.txt";

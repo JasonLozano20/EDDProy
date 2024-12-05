@@ -31,7 +31,7 @@ namespace EDDemo.Hash
 
         private void Redimensionar()
         {
-            int nuevoTamanio = tamanio * 2; // Duplica el tamaño
+            int nuevoTamanio = tamanio * 2; 
             var nuevaTabla = new List<KeyValuePair<string, string>>[nuevoTamanio];
 
             for (int i = 0; i < nuevoTamanio; i++)
@@ -120,6 +120,8 @@ namespace EDDemo.Hash
         }
         public void CargarDesdeArchivo(string ruta)
         {
+            
+            
             if (!File.Exists(ruta))
             {
                 MessageBox.Show("El archivo no existe.");
