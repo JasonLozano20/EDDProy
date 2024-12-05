@@ -41,6 +41,7 @@ namespace EDDemo
             this.circularDobleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estructurasNoLibealesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.arbolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.metodosDeOrdenamientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +51,8 @@ namespace EDDemo
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.recursividadToolStripMenuItem,
             this.estructurasLinealesToolStripMenuItem,
-            this.estructurasNoLibealesToolStripMenuItem});
+            this.estructurasNoLibealesToolStripMenuItem,
+            this.metodosDeOrdenamientoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
@@ -144,6 +146,13 @@ namespace EDDemo
             this.arbolesToolStripMenuItem.Text = "Arboles";
             this.arbolesToolStripMenuItem.Click += new System.EventHandler(this.arbolesToolStripMenuItem_Click);
             // 
+            // metodosDeOrdenamientoToolStripMenuItem
+            // 
+            this.metodosDeOrdenamientoToolStripMenuItem.Name = "metodosDeOrdenamientoToolStripMenuItem";
+            this.metodosDeOrdenamientoToolStripMenuItem.Size = new System.Drawing.Size(201, 24);
+            this.metodosDeOrdenamientoToolStripMenuItem.Text = "Metodos de ordenamiento";
+            this.metodosDeOrdenamientoToolStripMenuItem.Click += new System.EventHandler(this.metodosDeOrdenamientoToolStripMenuItem_Click);
+            // 
             // frmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -176,6 +185,7 @@ namespace EDDemo
         private System.Windows.Forms.ToolStripMenuItem circularToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem circularDobleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem recursividadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem metodosDeOrdenamientoToolStripMenuItem;
     }
 }
 

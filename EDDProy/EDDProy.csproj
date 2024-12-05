@@ -143,6 +143,16 @@
       <DependentUpon>frmInicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Graphviz.cs" />
+    <Compile Include="Metodos de ordenamiento\Burbuja\Burbuja.cs" />
+    <Compile Include="Metodos de ordenamiento\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Metodos de ordenamiento\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Metodos de ordenamiento\QuickSort\QuickSort.cs" />
+    <Compile Include="Metodos de ordenamiento\Radix\Radix.cs" />
+    <Compile Include="Metodos de ordenamiento\ShellShort\ShellShort.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recursividad\BusquedaBinaria\BusquedaBinaria.cs" />
@@ -243,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmInicio.resx">
       <DependentUpon>frmInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metodos de ordenamiento\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

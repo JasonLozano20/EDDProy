@@ -205,7 +205,7 @@ namespace EDDemo.Estructuras_No_Lineales
 
             // Mostramos el resultado 
             if (encontrado)
-                MessageBox.Show("Valor encontrado en el arbol.");
+                MessageBox.Show($"Valor {valorBuscado} encontrado en el arbol.");
             else
                 MessageBox.Show("Valor no encontrado en el arbol.");
         }
@@ -258,7 +258,6 @@ namespace EDDemo.Estructuras_No_Lineales
                          $"Total de nodos: {miArbol.ContarNodos()}\n " +
                          $"El arbol esta completo: {miArbol.EsArbolCompleto()}\n" +
                          $"Es arbol esta lleno: {miArbol.EsArbolLleno()}";
-
             MessageBox.Show(info, "Informacion del Arbol", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }

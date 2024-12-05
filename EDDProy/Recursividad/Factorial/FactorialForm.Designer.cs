@@ -43,7 +43,7 @@
             this.number.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.number.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.number.Location = new System.Drawing.Point(349, 228);
-            this.number.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.number.Margin = new System.Windows.Forms.Padding(4);
             this.number.Name = "number";
             this.number.Size = new System.Drawing.Size(157, 22);
             this.number.TabIndex = 0;
@@ -53,7 +53,7 @@
             this.start.BackColor = System.Drawing.Color.Gray;
             this.start.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.start.Location = new System.Drawing.Point(349, 305);
-            this.start.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.start.Margin = new System.Windows.Forms.Padding(4);
             this.start.Name = "start";
             this.start.Size = new System.Drawing.Size(157, 52);
             this.start.TabIndex = 1;
@@ -150,7 +150,7 @@
             this.Controls.Add(this.labelResult);
             this.Controls.Add(this.start);
             this.Controls.Add(this.number);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FactorialForm";
             this.Text = "FactorialForm";
             this.ResumeLayout(false);
