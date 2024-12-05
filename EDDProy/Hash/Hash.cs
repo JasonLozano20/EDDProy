@@ -10,12 +10,12 @@ namespace EDDemo.Hash
 {
     public class Hash
     {
-        private int tamanio; // Tamaño dinámico
+        private int tamanio; 
         private List<KeyValuePair<string, string>>[] tabla;
 
         public Hash()
         {
-            tamanio = 100; // Tamaño inicial
+            tamanio = 100; 
             tabla = new List<KeyValuePair<string, string>>[tamanio];
             for (int i = 0; i < tamanio; i++)
             {

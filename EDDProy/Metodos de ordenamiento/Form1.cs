@@ -47,7 +47,6 @@ namespace EDDemo.Metodos_de_ordenamiento
             {
                 ListaEnteros.Add(rnd.Next(-50,100));
             }
-            //Mostramos la lista en el textBox
             txtLista.Text = string.Join(",  ", ListaEnteros);
         }
 
@@ -81,7 +80,6 @@ namespace EDDemo.Metodos_de_ordenamiento
                 lblShellSort.Text = " "+ string.Join(", ", datos);
                 stopwatch.Stop();
                 time1.Text = "Tiempo: " + stopwatch.Elapsed.TotalMilliseconds+ " ms";
-
 
                 Radix radix = new Radix();
                 Stopwatch stopwatch1 = new Stopwatch();

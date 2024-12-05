@@ -47,7 +47,7 @@ namespace EDDemo.Busqueda
             listDatos.Items.Clear();
             Random random = new Random();
 
-            for (int i = 0; i < 10; i++) // Genera 10 pares clave-valor
+            for (int i = 0; i < 10; i++) 
             {
                 // Clave única: un número aleatorio del 1 al 100
                 int clave = random.Next(1, 100);
@@ -58,7 +58,7 @@ namespace EDDemo.Busqueda
                 hashTable.Insertar(clave.ToString(), valor);
             }
 
-            ActualizarListBox(); // Método que muestra los elementos en la interfaz
+            ActualizarListBox();
         }
 
         private void btnCargarArchivo_Click(object sender, EventArgs e)
@@ -71,7 +71,7 @@ namespace EDDemo.Busqueda
                     try
                     {
                         hashTable.CargarDesdeArchivo(openFileDialog.FileName);
-                        ActualizarListBox(); // Método que actualiza la visualización
+                        ActualizarListBox(); 
                     }
                     catch (FileNotFoundException ex)
                     {
