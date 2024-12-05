@@ -9,7 +9,7 @@ namespace EDDemo.Metodos_de_ordenamiento
     public class QuickSort
     {
         //Metodo que realiza el ordenamiento del arreglo
-        public  void QuickSortAlgorithm(int[] datos, int menor, int mayor)
+        public void QuickSortAlgorithm(int[] datos, int menor, int mayor)
         {
             //Condicion de salida para la recursion
             if (menor < mayor)
@@ -26,7 +26,7 @@ namespace EDDemo.Metodos_de_ordenamiento
 
         }
         //Metodo para reorganizar los elementos en relacion al pivote
-       public static int Particion(int[] datos, int menor, int mayor)
+        public static int Particion(int[] datos, int menor, int mayor)
         {
             //Selecciona el ultimo elemento como pivote
             int pivote = datos[mayor];
@@ -53,6 +53,6 @@ namespace EDDemo.Metodos_de_ordenamiento
             datos[i] = datos[j];
             datos[j] = temp;
         }
-        
+
     }
 }

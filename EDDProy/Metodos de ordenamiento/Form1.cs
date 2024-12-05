@@ -19,9 +19,8 @@ namespace EDDemo.Metodos_de_ordenamiento
         {
 
             InitializeComponent();
-           
-        }
 
+        }
         private void FormMetodo_Load(object sender, EventArgs e)
         {
 
