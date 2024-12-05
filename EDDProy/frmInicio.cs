@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Algoritmos_recursividad;
+using EDDemo.Busqueda;
 using EDDemo.Estructuras_No_Lineales;
 using EDDemo.Metodos_de_ordenamiento;
 
@@ -90,6 +91,14 @@ namespace EDDemo
             FormMetodo metodo = new FormMetodo();
             metodo.MdiParent = this;
             metodo.Show();
+        }
+
+        private void hashToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmHash Hash = new FrmHash();
+            Hash.MdiParent = this;
+            Hash.Show();
+
         }
     }
 }

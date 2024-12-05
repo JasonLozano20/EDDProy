@@ -143,6 +143,13 @@
       <DependentUpon>frmInicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Graphviz.cs" />
+    <Compile Include="Hash\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hash\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hash\Hash.cs" />
     <Compile Include="Metodos de ordenamiento\Burbuja\Burbuja.cs" />
     <Compile Include="Metodos de ordenamiento\Form1.cs">
       <SubType>Form</SubType>
@@ -253,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmInicio.resx">
       <DependentUpon>frmInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hash\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Metodos de ordenamiento\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
