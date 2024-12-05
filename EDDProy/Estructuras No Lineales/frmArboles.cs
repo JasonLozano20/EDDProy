@@ -260,6 +260,11 @@ namespace EDDemo.Estructuras_No_Lineales
                          $"Es arbol esta lleno: {miArbol.EsArbolLleno()}";
             MessageBox.Show(info, "Informacion del Arbol", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void frmArboles_Load(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

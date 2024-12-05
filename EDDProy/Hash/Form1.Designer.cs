@@ -1,6 +1,6 @@
-﻿namespace EDDemo.Busqueda
+﻿namespace EDDemo.Hash
 {
-    partial class FrmHash
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -108,6 +108,7 @@
             this.Controls.Add(this.txtDato);
             this.Name = "FrmHash";
             this.Text = "FrmHash";
+            this.Load += new System.EventHandler(this.FrmHash_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

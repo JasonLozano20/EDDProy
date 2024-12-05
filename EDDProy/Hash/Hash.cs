@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
 
-namespace EDDemo.Hash
+namespace EDDemo.Busqueda
+
 {
     public class Hash
     {
-        private int tamanio; 
+        private int tamanio;
         private List<KeyValuePair<string, string>>[] tabla;
 
         public Hash()
         {
-            tamanio = 100; 
+            tamanio = 100;
             tabla = new List<KeyValuePair<string, string>>[tamanio];
             for (int i = 0; i < tamanio; i++)
             {
@@ -31,7 +32,7 @@ namespace EDDemo.Hash
 
         private void Redimensionar()
         {
-            int nuevoTamanio = tamanio * 2; 
+            int nuevoTamanio = tamanio * 2;
             var nuevaTabla = new List<KeyValuePair<string, string>>[nuevoTamanio];
 
             for (int i = 0; i < nuevoTamanio; i++)
@@ -119,8 +120,7 @@ namespace EDDemo.Hash
             return elementos;
         }
         public void CargarDesdeArchivo(string ruta)
-        {
-            
+        { 
             
             if (!File.Exists(ruta))
             {
@@ -148,7 +148,7 @@ namespace EDDemo.Hash
                 }
             }
             catch (Exception ex)
-            {
+            { 
                 MessageBox.Show($"Error: {ex.Message}");
             }
         }

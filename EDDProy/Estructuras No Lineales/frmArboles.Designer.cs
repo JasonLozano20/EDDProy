@@ -352,6 +352,7 @@ namespace EDDemo.Estructuras_No_Lineales
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmArboles";
             this.Text = "frmArboles";
+            this.Load += new System.EventHandler(this.frmArboles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtNodos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

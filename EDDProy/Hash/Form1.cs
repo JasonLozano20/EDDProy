@@ -10,15 +10,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
-namespace EDDemo.Busqueda
+namespace EDDemo.Hash
 {
-    public partial class FrmHash: Form
+    public partial class Form1: Form
     {
-        private EDDemo.Hash.Hash hashTable; 
-        public FrmHash()
+        public Hash hashTable;
+        public Form1()
         {
             InitializeComponent();
-            hashTable = new EDDemo.Hash.Hash(); ;
+            hashTable = new Hash(); 
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -43,7 +43,7 @@ namespace EDDemo.Busqueda
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            hashTable = new Hash.Hash();
+            hashTable = new Hash();
             listDatos.Items.Clear();
             Random random = new Random();
 
@@ -99,6 +99,11 @@ namespace EDDemo.Busqueda
             {
                 listDatos.Items.Add(elemento);
             }
+        }
+
+        private void FrmHash_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

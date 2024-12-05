@@ -29,7 +29,6 @@ namespace EDDemo
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.recursividadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estructurasLinealesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pilasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,24 +42,9 @@ namespace EDDemo
             this.arbolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metodosDeOrdenamientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hashToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.recursividadToolStripMenuItem,
-            this.estructurasLinealesToolStripMenuItem,
-            this.estructurasNoLibealesToolStripMenuItem,
-            this.metodosDeOrdenamientoToolStripMenuItem,
-            this.hashToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(900, 26);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // recursividadToolStripMenuItem
             // 
@@ -162,6 +146,22 @@ namespace EDDemo
             this.hashToolStripMenuItem.Text = "Hash";
             this.hashToolStripMenuItem.Click += new System.EventHandler(this.hashToolStripMenuItem_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.recursividadToolStripMenuItem,
+            this.estructurasLinealesToolStripMenuItem,
+            this.estructurasNoLibealesToolStripMenuItem,
+            this.metodosDeOrdenamientoToolStripMenuItem,
+            this.hashToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
+            this.menuStrip1.Size = new System.Drawing.Size(900, 26);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
             // frmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -182,20 +182,21 @@ namespace EDDemo
         }
 
         #endregion
-        private System.Windows.Forms.MenuStrip menuStrip1;
+
+        private System.Windows.Forms.ToolStripMenuItem recursividadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estructurasLinealesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pilasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem colasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem estructurasNoLibealesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem arbolesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem simpleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dobleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem circularToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem circularDobleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem recursividadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem estructurasNoLibealesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem arbolesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem metodosDeOrdenamientoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hashToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }
 
