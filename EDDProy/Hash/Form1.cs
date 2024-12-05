@@ -32,7 +32,7 @@ namespace EDDemo.Busqueda
                 }
                 else
                 {
-                    MessageBox.Show("Clave  no encontrada.");
+                    MessageBox.Show("Clave no encontrada.");
                 }
             }
             else
